@@ -1,0 +1,92 @@
+--[ 01 - Vim help syntax 
+
+Vim help syntax can be used for linking sections of the document:
+
+01. Headings                   |rtf_1|
+02. Syntax highlighting        |rtf_2|
+03. Coloring                   |rtf_3|
+
+--[ 01 - Headings              *rtf_1*
+
+--[ Heading 1              
+----[ Heading 2            
+-------[ Heading 3         
+---------[ Heading 4       
+
+* sections 1
+** sections 2
+*** sections 2
+**** sections 4
+
+When there is a colon at the end of the line, no underlining:
+
+* concept:
+
+Unless you really want it:
+
+* concept:_
+* concept:  _
+* concept:    _
+
+
+--[ 02 - Syntax highlighting   *rtf_2*
+
+C syntax by default:
+
+```
+#include <stdio.h>
+
+int main(int argc, char** argv) {
+    printf("Vim RTF ftw!\n");
+}
+```
+
+The language can be specified as per below:
+
+```python
+ 1 #!/usr/bin/env python
+ 2
+ 3 def test():
+ 4     print("Vim RTF ftw!")
+ 5
+ 6 if __name__ == "__main()__":
+ 7     test()
+ 8
+```
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Vim RTF ftw!");
+    }
+}
+```
+
+```bash
+#!/bin/bash
+echo "Vim RTF ftw!"
+```
+
+--[ 03 - Coloring              *rtf_3*
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor       <:g
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis           <:r
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        <:25b
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu      <:-5o
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in       <:bb
+culpa qui `officia deserunt mollit` anim id 'est' laborum.
+
+!: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor      
+!: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis          
+!: nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.       
++: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu     
++: fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in      
++: culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem `ipsum dolor sit amet`, consectetur adipiscing elit, sed do eiusmod tempor     
+incididunt `ut labore et dolore magna` aliqua. Ut enim ad minim veniam, quis         <:r` 
+nostrud exercitation ullamco laboris `nisi ut aliquip ex ea` commodo consequat.      <:b` 
+Duis aute irure dolor in reprehenderit in voluptate velit `esse cillum dolore` eu    <:g`  
+fugiat `nulla pariatur`. Excepteur sint occaecat cupidatat non proident, sunt in     <:u`
+culpa qui officia deserunt mollit anim `id est laborum`.                             <:bb`
+

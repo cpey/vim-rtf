@@ -1,2 +1,3 @@
 # vim-rtf
-Syntax coloring for my vim notes.
+
+Vim format definition to add syntax colorign to my notes.
